@@ -80,6 +80,8 @@ async def format_status_message(ig_data: dict, tt_data: dict) -> str:
     # TikTok
     if tt_data and tt_data.get("followers") is not None:
         last_tt = f"<a href='{tt_data['last_item_url']}'>Открыть видео</a>" if tt_data.get("last_item_url") else "нет данных"
+        likes_str = f"{tt_data['likes']:,}" if tt_data.get("likes") is not None else "—"
+        story_status = "Есть активная история ✨" if tt_data.get("has_story") else "Нет активных историй"
         likes_tab = "🔓 Открыт для всех" if tt_data.get("open_favorite") else "🔒 Скрыт пользователем"
         msg += (
             f"🎥 <b>TikTok:</b> <a href='https://www.tiktok.com/@{config.TIKTOK_TARGET}'>@{config.TIKTOK_TARGET}</a>\n"

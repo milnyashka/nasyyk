@@ -39,3 +39,4 @@ cd C:\Users\Astra\.gemini\antigravity\scratch\social_monitor
 .venv\Scripts\python.exe bot.py
 ```
 
+После запуска напишите боту в Telegram [@nasyyk_bot](https://t.me/nasyyk_bot) команду `/start`.
